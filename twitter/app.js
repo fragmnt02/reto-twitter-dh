@@ -7,7 +7,7 @@ const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var twitsRouter = require('./routes/twits');
+//var twitsRouter = require('./routes/twits');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/twits', twitsRouter);
+//app.use('/twits', twitsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,6 +44,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log('Servidor corriendo en el puerto 3000')
 });
 
 module.exports = app;
