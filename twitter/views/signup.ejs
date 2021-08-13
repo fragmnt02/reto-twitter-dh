@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body class="register">
+    <header>
+        <img src="https://cdn.wccftech.com/wp-content/uploads/2021/02/twitter-for-iOS.jpg">
+    </header>
+    <div class="signup">
+        <div class="subtitle">
+            <h2>¿Aún no tienes una cuenta? ¡Regístrate!</h2>
+        </div>
+        <form class="form" action="/users/registro" method="POST">
+            <h3>Completa los siguientes datos:</h3>
+            <br>
+            <label for="username">
+                <p><span>*</span>Nombre de Usuario:</p>
+                <input id="username" type="text" name="username" required>
+            </label>
+            <label for="signup-email">
+                <p><span>*</span>E-Mail:</p>
+                <input id="signup-email" type="email" name="user" required>               
+            </label>
+            <div>
+            </div>
+            <label for="signup-password">
+                <p><span>*</span>Contraseña:</p>
+                <input id="password" type="password" name="password1" 
+                 required>
+            </label>
+            <label for="signup-password-confirm">
+                <p><span>*</span>Confirmar Contraseña:</p>
+                <input id="signup-password-confirm" type="password" name="password2" 
+                required>
+            </label>
+            <label id="tnc" for="accept-tnc">   
+                <input id="accept-tnc" type="checkbox" name="yes" required value="yes"><p id="tnc-statement"><span>*</span>Acepto los <a href="#terms-and-conditions">términos y condiciones</a></p><br>  
+            </label>
+
+            <button type="submit">Crear Cuenta</button>
+        </form>
+    </div>
+</body>
+</html>
